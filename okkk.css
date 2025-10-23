@@ -1,0 +1,112 @@
+:root {
+      --bg: #c48ada;
+      --card: #cb7cd6;
+      --accent: #4c0357;
+      --muted: #49004b;
+      --radius: 12px;
+      font-family: "Arial", 'Arial', "Arial", Arial ;
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(180deg, #3e0146 0%, #cb2dd7 100%);
+      color: #1b2233;
+      font-weight: bold
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      padding: 28px;
+      flex: 1;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      color: var(--accent);
+    }
+
+    p.lead {
+      margin: 0 0 18px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #3f005a;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #c9d0df;
+      background: #fbfdff;
+      outline: none;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 8px;
+      grid-column: 1 / -1;
+    }
+
+    button {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 6px 14px rgba(75, 124, 236, 0.18);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid #e6e9ef;
+    }
+
+    @media (max-width: 720px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 12px;
+      }
+    }
